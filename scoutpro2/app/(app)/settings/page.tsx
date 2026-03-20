@@ -42,7 +42,7 @@ export default function SettingsPage() {
         <div className="card space-y-4">
           <h2 className="font-semibold text-sm">Perfil</h2>
           <div><label className="label">Nombre completo</label><input className="input" value={name} onChange={e => setName(e.target.value)} /></div>
-          <div><label className="label">{t('email')}</label><input className="input" value={profile?.email ?? ''} disabled className="input opacity-60 cursor-not-allowed" /></div>
+          <div><label className="label">{t('email')}</label><input className="input opacity-60 cursor-not-allowed" value={profile?.email ?? ''} disabled /></div>
           {msg && <p className="text-xs text-green-600">{msg}</p>}
           <button onClick={handleSave} disabled={saving} className="btn-primary">{saving ? 'Guardando...' : t('save')}</button>
         </div>
